@@ -1,0 +1,30 @@
+# Файлы Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Файлы CMake
+build/
+out/
+CMakeCache.txt
+CMakeFiles/
+*.cmake
+Makefile
+
+# Исполняемые файлы
+*.exe
+*.out
+*.app
+
+# Бинарные файлы
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+
+# Резервные копии
+*~
+*.bak
