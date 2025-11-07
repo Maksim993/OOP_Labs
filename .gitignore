@@ -1,0 +1,167 @@
+# ===============================================
+# Файлы сборки и исполняемые файлы
+# ===============================================
+
+# Папки сборки CMake
+[Bb]uild/
+[Bb]uild-*/
+[Oo]ut/
+[Bb]in/
+[Cc]make-[Bb]uild-*/
+
+# Исполняемые файлы
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
+# Объектные файлы
+*.o
+*.obj
+*.a
+*.lib
+
+# ===============================================
+# Файлы CMake
+# ===============================================
+
+CMakeCache.txt
+CMakeFiles/
+*.cmake
+!CMakeLists.txt
+Makefile
+cmake_install.cmake
+CTestTestfile.cmake
+*.cmake.*
+*.cmake-*
+
+# Автогенерированные файлы CMake
+*.cmake.in
+*.cmake.stamp
+
+# ===============================================
+# Файлы IDE и редакторов
+# ===============================================
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+*.sdf
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sln.docstates
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# CLion
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+.settings/
+.project
+.classpath
+.cproject
+
+# ===============================================
+# Системные и временные файлы
+# ===============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# Временные файлы
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# Логи
+*.log
+*.tlog
+*.idb
+*.pdb
+
+# ===============================================
+# Зависимости и сторонние библиотеки
+# ===============================================
+
+# Google Test (скачивается автоматически через FetchContent)
+**/build/_deps/
+
+# Локальные установки библиотек
+lib/
+libs/
+thirdparty/
+third_party/
+external/
+
+# ===============================================
+# Документация
+# ===============================================
+
+# Doxygen
+docs/html/
+docs/latex/
+
+# ===============================================
+# Специфичные для лабораторных работ
+# ===============================================
+
+# Тестовые данные
+*.test
+*.testdata
+
+# Резервные копии
+backup/
+*.backup
+
+# ===============================================
+# Исключения (что НЕ игнорировать)
+# ===============================================
+
+!README.md
+!*.txt
+!*.md
+!*.pdf
+
+# Исходные коды
+!*.cpp
+!*.h
+!*.hpp
+!*.c
+
+# Файлы проектов
+!CMakeLists.txt
+!*.json
+!*.yml
+!*.yaml
