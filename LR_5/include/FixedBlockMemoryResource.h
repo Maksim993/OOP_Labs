@@ -6,7 +6,7 @@
 #include <vector>
 #include <cstddef>
 #include <iostream>
-#include <algorithm>  // Добавляем для std::find_if
+#include <algorithm>  //для std::find_if
 
 class FixedBlockMemoryResource : public std::pmr::memory_resource {
 private:
@@ -41,11 +41,9 @@ protected:
         if (used_memory + bytes > block_size) {
             throw std::bad_alloc();
         }
-
         // Выделяем память из нашего блока
         void* ptr = static_cast<char*>(memory_block) + used_memory;
         used_memory += bytes;
-
         // Сохраняем информацию о выделенном блоке
         allocated_blocks.emplace_back(ptr, bytes);
         
@@ -60,7 +58,6 @@ protected:
         // Ищем блок в списке выделенных
         auto it = std::find_if(allocated_blocks.begin(), allocated_blocks.end(),
             [ptr](const auto& block) { return block.first == ptr; });
-
         if (it != allocated_blocks.end()) {
             std::cout << "do_deallocate: освобождено " << bytes << " байт по адресу " << ptr << "\n";
             allocated_blocks.erase(it); // Удаляем из списка выделенных
@@ -71,7 +68,6 @@ protected:
             std::cout << "do_deallocate: попытка освободить невыделенную память!\n";
         }
     }
-
     // Сравнение аллокаторов
     bool do_is_equal(const std::pmr::memory_resource& other) const noexcept override {
         return this == &other; // Сравниваем по указателям

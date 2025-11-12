@@ -5,7 +5,7 @@
 #include <iterator>
 #include <stdexcept>
 #include <iostream>
-#include <utility>  // Добавляем для std::move
+#include <utility>  // для std::move
 #include "DynamicArrayIterator.h"
 
 template<typename T>
